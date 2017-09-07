@@ -15,16 +15,6 @@
         <link rel="stylesheet" href="/css/fonts-min.css">
         <link rel="stylesheet" href="/css/font-awesome.min.css">
         <link rel="stylesheet" href="/css/normalize.min.css">
-        <script src="/js/tinymce.min.js"></script>
-        <script>tinymce.init({
-          selector:'textarea',
-          branding: false,
-          elementpath: false,
-          menubar: 'tools',
-          toolbar: 'undo redo | styleselect | bold italic | bullets',
-          statusbar: false,
-          height : 200
-        });</script>
         <script src="/js/custom.js"></script>
     </head>
     <body>
@@ -87,56 +77,79 @@
 
               <hr class="commenti">
               <h3>Cosa cambieresti o aggiungeresti rispetto alle indicazioni di cui sopra?</h3>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">Nome&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <input type="text" class="form-control" placeholder="Nome" aria-describedby="basic-addon1">
-                  </div>
-                </div><!-- /input-group -->
-                <div class="col-lg-6">
-                  <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">Cognome&nbsp;&nbsp;&nbsp;</span>
-                    <input type="text" class="form-control" placeholder="Cognome" aria-describedby="basic-addon1">
-                  </div>
-                </div><!-- /input-group -->
-              </div><!-- /.col-lg-6 -->
-              
-              <p> </p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">Luogo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <input type="text" class="form-control" placeholder="Luogo" aria-describedby="basic-addon1">
-                  </div>
-                </div><!-- /input-group -->
-                <div class="col-lg-6">
-                  <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">Occupazione</span>
-                    <input type="text" class="form-control" placeholder="Occupazione" aria-describedby="basic-addon1">
-                  </div>
-                </div><!-- /input-group -->
-              </div><!-- /.col-lg-6 -->
-              <p> </p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
-                  </div>
-                </div><!-- /input-group -->
-                <div class="col-lg-6">
-                  <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1">Telefono</span>
-                    <input type="text" class="form-control" placeholder="Telefono" aria-describedby="basic-addon1">
-                  </div>
-                </div><!-- /input-group -->
-              </div><!-- /.col-lg-6 -->
-              <p> </p>
-              <textarea>Inserisci il tuo commento qui.</textarea>
-              <p> </p>
-              <button type="button" class="btn btn-primary btn-block">Invia</button>
+                         
+              <!-- Inline CSS -->
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
 
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-12 col-sm-12 col-xs-12">
+    <form action="https://formspree.io/info@ammsostegno-lineeguida.it" method="post">
+     <div class="form-group ">
+      <label class="control-label requiredField" for="name">
+       Nome e cognome
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="name" name="name" type="text"/>
+      <input type="hidden" name="_subject" value="Nuovo commento su: 26.6&nbsp;-&nbsp;Quali sono i poteri e i relativi limiti, prescritti nel provvedimento del giudice tutelare, da attribuire all'amministratore di sostegno nelle forme della rappresentanza o dell'assistenza del beneficiario nell'acconsentire a un ben individuato intervento sanitario o terapia farmacologica?" />
+      <input type="hidden" name="_format" value="plain" />
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="email">
+       Email
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="email" name="_replyto" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="occupazione">
+       Occupazione
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="occupazione" name="Occupazione" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="luogo">
+       Luogo
+      </label>
+      <input class="form-control" id="luogo" name="Luogo" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="tel">
+       Numero di telefono
+      </label>
+      <input class="form-control" id="tel" name="Telefono" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="message">
+       Message
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <textarea class="form-control" cols="40" id="message" name="Commento" rows="10"></textarea>
+     </div>
+     <div class="form-group">
+      <div>
+       <button class="btn btn-primary " name="submit" type="submit">
+        Invia commento
+       </button>
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+                            
             </div>
           </div>
 
